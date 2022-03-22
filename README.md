@@ -1,8 +1,8 @@
 # CP
 
-My solutions to several programming problems
+My solutions to several competitive programming problems
 
-### [Cheat Sheet](./cheat_sheet.cpp)
+### Competitive Programming [Cheat Sheet](./cheat_sheet.cpp)
 
 Useful implementations for various
 reccuring problems.
