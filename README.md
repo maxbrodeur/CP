@@ -1,7 +1,3 @@
-# CP
-
-My solutions to several competitive programming problems
-
 ### Competitive Programming [Cheat Sheet](./cheat_sheet.cpp)
 
 Useful implementations for various
@@ -21,4 +17,4 @@ Includes:
 	- degrees to radians
 	- setprecision
 
-#### Link to [Kattis Profile](https://open.kattis.com/users/max-brodeur)
+### Link to [Kattis Profile](https://open.kattis.com/users/max-brodeur)
