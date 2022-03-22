@@ -12,8 +12,10 @@ Includes:
 1. GEOMETRY:
 	- Polygon struct
 	- Vector2D class
+	
 2. PATTERN MATCHING:
 	- LPS + KMP for finding string/s in text
+	
 3. UTILITY:
 	- print int arr
 	- degrees to radians
