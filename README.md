@@ -14,7 +14,7 @@ Includes:
 	- Vector2D class
 	
 2. PATTERN MATCHING:
-	- LPS + KMP for finding string/s in text
+	- LPS + KMP for finding string/s in text (*Longest Prefix Suffix & Knuth Morrris Pratt*)
 	
 3. UTILITY:
 	- print int arr
