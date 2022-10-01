@@ -31,7 +31,7 @@ Includes:
 
 ## Fibonacci
 Recursive with memoization
-```
+```c
 #define size 4000001
 
 unsigned mem[size] = {0};
@@ -49,7 +49,7 @@ unsigned fib(unsigned N) {
 
 ## Factorization
 
-```
+```c
 #include <vector>
 vector<long> factorization(long N){
     vector<long> factors;
@@ -70,7 +70,7 @@ vector<long> factorization(long N){
 
 ## is base 10 palindrome
 
-```
+```c
 #include <vector>
 bool is_base10_palindrome(long N){
     vector<int> digits;
@@ -99,7 +99,7 @@ bool is_base10_palindrome(long N){
 ```
 
 ## GCD
-```
+```c
 long gcd(long a, long b){
     long r;
     // express a = b*n + r
@@ -116,7 +116,7 @@ long gcd(long a, long b){
 
 ## Polygon Struct
 
-```
+```c
 //Pre-req
 #include <utility>
 
@@ -158,7 +158,7 @@ struct Polygon {
 
 ### Vector 2D struct
 
-```
+```c
 // 2D vector class for vector manip
 //Pre-reqs
 #include <cmath>
@@ -282,7 +282,7 @@ struct Vector2D {
 
 ## KMP
 
-```
+```c
 // Knuth Morris Pratt Algorithm for finding strings in text
 
 // LPS = Longest proper prefix which is also a suffix
@@ -344,7 +344,7 @@ vector<int> KMP_all(string pat, string text, int* LPS){
 # DATA STRUCTURES
 
 ## Disjoint Sets
-```
+```c
 class DisjSet{
 	int *L, n;
 
@@ -389,7 +389,7 @@ public:
 # Utility
 
 ## Print int array
-```
+```c
 //print an int array
 void print_int_arr(int* arr, int size){
 	cout<<"[";
@@ -403,17 +403,17 @@ void print_int_arr(int* arr, int size){
 ```
 
 ## pi
-```
+```c
 double pi = atan(1)*4;
 ```
 
 ## Convert to radians 
-```
+```c
 a = a*(pi/180.0);
 ```
 
 ## Set Precision
-```
+```c
 cout << fixed << setprecision(1) << pi << endl;
 ```
 
