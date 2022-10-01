@@ -13,6 +13,12 @@ reccuring problems.
 
 Includes:
 
+NUMBER THEORY:
+	- Fibonacci
+	- Factorization
+	- Is a base 10 palindrome integer
+	- GCD
+
 GEOMETRY:
 	- Polygon struct
 	- Vector2D class
@@ -20,11 +26,93 @@ GEOMETRY:
 PATTERN MATCHING:
 	- LPS + KMP for finding string/s in text
 
+DATA STRUCTURES:
+	- Disjoint Sets
+
 UTILITY:
 	- print int arr
 	- degrees to radians
 	- setprecision
 */
+
+//---------------------NUMBER THEORY-------------------//
+
+//FIBONACCI - recursive with memoization
+#define size 4000001
+
+unsigned mem[size] = {0};
+bool checked[size] = {false};
+
+// returns the unsigned fibonnaci number
+unsigned fib(unsigned N) {
+    if (!checked[N]){
+        mem[N]=fib(N-1)+fib(N-2);
+        checked[N]=true;
+    }
+    return mem[N];
+}
+
+
+
+
+//FACTORIZATION
+#include <vector>
+vector<long> factorization(long N){
+    vector<long> factors;
+    for (size_t d = 2; d*d <= N; d++)
+    {
+        while(N%d==0){
+            N /= d;
+            factors.push_back(d);
+        }
+    }
+    if (N>1)
+    {
+        factors.push_back(N);
+    }
+    return factors;
+}
+
+//IS A BASE 10 PALINDROM INTEGER
+#include <vector>
+bool is_base10_palindrome(long N){
+    vector<int> digits;
+    int count = 0;
+    while (N>0)
+    {
+        int temp = N;
+        N/=10;
+        int digit = temp - N*10;
+        digits.push_back(digit);
+        count++;
+    }
+    vector<int>::iterator bot = digits.begin();
+    vector<int>::iterator top = digits.end();
+    int i = 0;
+    while(i<count/2){
+        top--;
+        if(*bot!=*top){
+            return false;
+        }
+        bot++;
+        i++;
+    }
+    return true;   
+}
+
+// GCD
+long gcd(long a, long b){
+    long r;
+    // express a = b*n + r
+    while(b>0){
+        r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+
 
 //---------------------GEOMETRY------------------------//
 
@@ -242,6 +330,49 @@ vector<int> KMP_all(string pat, string text, int* LPS){
 	}
 	return ans;
 }
+
+
+//--------------------DATA STRUCTURES-------------------//
+
+class DisjSet{
+	int *L, n;
+
+public:
+
+	DisjSet(int n){
+
+		L = new int[n];
+		this->n = n;
+		make_set();
+
+
+	}
+
+	void make_set(){
+
+		for (int i = 0; i < n; ++i)
+		{
+			L[i] = i;
+		}
+
+	}
+
+	int find(int x){
+		int root = x;
+		while(root!=L[root])root = L[root];
+		while(x!=L[x]){
+			int next = L[x];
+			L[x] = root;
+			x = next;
+		}
+		return x;
+	}
+
+	void Union(int x, int y){
+		L[find(x)] = find(y);
+	}
+
+};
 
 
 
