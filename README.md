@@ -417,4 +417,9 @@ a = a*(pi/180.0);
 cout << fixed << setprecision(1) << pi << endl;
 ```
 
+## Specify c++ version
+```
+g++ -std=c++17 [FILENAME].cpp
+```
+
 ### Link to [Kattis Profile](https://open.kattis.com/users/max-brodeur)
